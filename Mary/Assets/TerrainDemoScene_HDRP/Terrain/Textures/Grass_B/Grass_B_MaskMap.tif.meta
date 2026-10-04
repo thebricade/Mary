@@ -69,7 +69,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 2
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -134,8 +134,8 @@ TextureImporter:
   assetBundleVariant: 
 AssetOrigin:
   serializedVersion: 1
-  productId: 213198
-  packageName: Unity HDRP Terrain | Terrain Sample Project
-  packageVersion: 1.1.0
+  productId: 145808
+  packageName: Terrain Asset Pack | Terrain Sample
+  packageVersion: 2.1.0
   assetPath: Assets/TerrainDemoScene_HDRP/Terrain/Textures/Grass_B/Grass_B_MaskMap.tif
-  uploadId: 993772
+  uploadId: 998046

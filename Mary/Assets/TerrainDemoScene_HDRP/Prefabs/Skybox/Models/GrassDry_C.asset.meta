@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 9bfe5ad8c892b44a7bb904d740d614da
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 4300000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 145808
+  packageName: Terrain Asset Pack | Terrain Sample
+  packageVersion: 2.1.0
+  assetPath: Assets/TerrainDemoScene_HDRP/Prefabs/Skybox/Models/GrassDry_C.asset
+  uploadId: 998046

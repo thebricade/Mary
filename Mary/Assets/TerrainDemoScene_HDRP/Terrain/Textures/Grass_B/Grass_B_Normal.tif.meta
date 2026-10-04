@@ -5,7 +5,7 @@ TextureImporter:
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
-    mipMapMode: 1
+    mipMapMode: 0
     enableMipMap: 1
     sRGBTexture: 0
     linearTexture: 0
@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 4
     mipBias: 0
     wrapU: 0
@@ -85,7 +85,7 @@ TextureImporter:
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
-    overridden: 0
+    overridden: 1
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -134,8 +134,8 @@ TextureImporter:
   assetBundleVariant: 
 AssetOrigin:
   serializedVersion: 1
-  productId: 213198
-  packageName: Unity HDRP Terrain | Terrain Sample Project
-  packageVersion: 1.1.0
+  productId: 145808
+  packageName: Terrain Asset Pack | Terrain Sample
+  packageVersion: 2.1.0
   assetPath: Assets/TerrainDemoScene_HDRP/Terrain/Textures/Grass_B/Grass_B_Normal.tif
-  uploadId: 993772
+  uploadId: 998046

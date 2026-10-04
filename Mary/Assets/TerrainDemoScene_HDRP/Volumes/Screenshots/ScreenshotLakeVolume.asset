@@ -235,11 +235,14 @@ MonoBehaviour:
     m_Value: 64
   m_VolumetricFogBudget:
     m_OverrideState: 0
-    m_Value: 0.33
+    m_Value: 0.5
   m_ResolutionDepthRatio:
     m_OverrideState: 0
-    m_Value: 0.666
+    m_Value: 0.5
   directionalLightsOnly:
+    m_OverrideState: 0
+    m_Value: 0
+  volumetricLightingDensityCutoff:
     m_OverrideState: 0
     m_Value: 0
 --- !u!114 &-5553571864250190661
@@ -255,6 +258,25 @@ MonoBehaviour:
   m_Name: VolumetricClouds
   m_EditorClassIdentifier: 
   active: 1
+  m_Version: 3
+  localClouds:
+    m_OverrideState: 0
+    m_Value: 0
+  m_ObsoleteWindSpeed:
+    m_OverrideState: 0
+    m_Value: 1
+  m_ObsoleteOrientation:
+    m_OverrideState: 0
+    m_Value: 0
+  m_ObsoleteShapeOffsetX:
+    m_OverrideState: 0
+    m_Value: 0
+  m_ObsoleteShapeOffsetY:
+    m_OverrideState: 0
+    m_Value: 0
+  m_ObsoleteShapeOffsetZ:
+    m_OverrideState: 0
+    m_Value: 0
   enable:
     m_OverrideState: 0
     m_Value: 0
@@ -539,25 +561,6 @@ MonoBehaviour:
   shadowOpacityFallback:
     m_OverrideState: 0
     m_Value: 0
-  m_Version: 3
-  localClouds:
-    m_OverrideState: 0
-    m_Value: 0
-  m_ObsoleteWindSpeed:
-    m_OverrideState: 0
-    m_Value: 1
-  m_ObsoleteOrientation:
-    m_OverrideState: 0
-    m_Value: 0
-  m_ObsoleteShapeOffsetX:
-    m_OverrideState: 0
-    m_Value: 0
-  m_ObsoleteShapeOffsetY:
-    m_OverrideState: 0
-    m_Value: 0
-  m_ObsoleteShapeOffsetZ:
-    m_OverrideState: 0
-    m_Value: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -578,7 +581,6 @@ MonoBehaviour:
   - {fileID: -6130802364556555006}
   - {fileID: 8812191186448840739}
   - {fileID: 5321442355751593193}
-  - {fileID: 0}
 --- !u!114 &5321442355751593193
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -1109,6 +1111,16 @@ MonoBehaviour:
   includeSunInBaking:
     m_OverrideState: 0
     m_Value: 0
+  m_SkyVersion: 2
+  m_ObsoleteEarthPreset:
+    m_OverrideState: 0
+    m_Value: 1
+  planetaryRadius:
+    m_OverrideState: 0
+    m_Value: 6378100
+  planetCenterPosition:
+    m_OverrideState: 0
+    m_Value: {x: 0, y: -6378100, z: 0}
   type:
     m_OverrideState: 0
     m_Value: 1
@@ -1199,13 +1211,3 @@ MonoBehaviour:
   horizonZenithShift:
     m_OverrideState: 0
     m_Value: 0
-  m_SkyVersion: 2
-  m_ObsoleteEarthPreset:
-    m_OverrideState: 0
-    m_Value: 1
-  planetaryRadius:
-    m_OverrideState: 0
-    m_Value: 6378100
-  planetCenterPosition:
-    m_OverrideState: 0
-    m_Value: {x: 0, y: -6378100, z: 0}
