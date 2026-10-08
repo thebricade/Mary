@@ -169,3 +169,6 @@ Mary/Packages/packages-lock.json linguist-generated
 
 # Exceptions for .asset files such as lightning pre-baking
 LightingData.asset     binary
+
+# Terrain data is binary-serialized by Unity; text/eol normalization corrupts it
+New[[:space:]]Terrain.asset binary
