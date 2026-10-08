@@ -172,3 +172,5 @@ LightingData.asset     binary
 
 # Terrain data is binary-serialized by Unity; text/eol normalization corrupts it
 New[[:space:]]Terrain.asset binary
+*.raw binary
+MaryTerrain*.asset binary
