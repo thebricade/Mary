@@ -97,7 +97,4 @@ public class FirstPersonController : MonoBehaviour
 
         controller.Move((horizontal + Vector3.up * verticalVelocity) * Time.deltaTime);
     }
-
-    // Wired up by the prefab builder so the prefab works without manual setup.
-    public void SetCameraHolder(Transform holder) => cameraHolder = holder;
 }
