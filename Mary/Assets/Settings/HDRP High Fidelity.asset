@@ -232,7 +232,7 @@ MonoBehaviour:
     renderingLayerMaskBuffer: 0
     supportWater: 1
     waterSimulationResolution: 128
-    supportWaterExclusion: 0
+    supportWaterExclusion: 1
     supportWaterHorizontalDeformation: 0
     supportWaterDecals: 1
     waterDecalAtlasSize: 1024
