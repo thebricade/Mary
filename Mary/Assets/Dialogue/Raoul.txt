@@ -1,0 +1,71 @@
+# Raoul de Chagny. Christine's childhood friend, now a patron of the Opera.
+# Format guide: _Format.txt
+
+=== start
+Raoul: Christine! | I have been looking for you | everywhere tonight.
+>> 1   | Raoul? What are you doing back here? -> surprised
+>> 1   | Not now, Raoul. -> brush_off
+>> 2   | I have been busy. -> busy
+>> 2-3 | You should not have followed me. -> followed
+>> end | I am here now. -> warm
+~ 3.5
+-> worried
+
+=== surprised
+Raoul: I came to see you, of course. | Do you remember the scarf, | and the little girl who laughed at me for fetching it?
+>> 1-2 | That was years ago. -> past
+>> 3   | I remember. I still think of it. -> still_have
+>> end | You never let that story go. -> past
+-> worried
+
+=== brush_off
+Raoul: Please. | Two minutes. | Whatever is troubling you, I can help.
+>> 1   | There is nothing you can do. -> cold
+>> 2-3 | You cannot help with this. -> cold
+>> end | Fine. Two minutes. -> warm
+-> worried
+
+=== busy
+Raoul: Busy, yes. | Everyone says you have a new teacher. | Who is he?
+>> 1   | He is no one you know. -> cold
+>> 2-3 | An angel. That is all I will say. -> angel
+>> end | I would rather not say. -> worried
+
+=== followed
+Raoul: Followed? | I only wanted to be sure | you were safe.
+>> 1-2 | Safe from what? -> worried
+>> end | Thank you. I know you mean well. -> warm
+
+=== warm
+Raoul: You are smiling. | It has been a long time since I saw that.
+>> any | It has been a long time since I had a reason to. -> still_have
+-> worried
+
+=== past
+Raoul: Perhaps. | But I have not forgotten you.
+-> worried
+
+=== still_have
+Raoul: Then you do remember. | Christine, | let me take you away from all of this.
+>> 1-2 | I cannot leave. Not yet. -> cannot
+>> 3   | Ask me again tomorrow. -> END
+>> end | Raoul. -> END
+
+=== worried
+Raoul: Something is wrong. | I can see it in your face, | and I will not stop asking.
+>> 1 | Then you will be asking for a long time. -> cold
+>> 2 | Then ask. -> angel
+>> 3, end | Not here. Not now. -> END
+
+=== angel
+Raoul: An angel. | Christine, | people do not hear angels, they hear men.
+>> 1-2 | He is not a man. -> cold
+>> end | Perhaps you are right. -> END
+
+=== cannot
+Raoul: Then tell me why. | At least tell me that.
+>> any | I am afraid of what happens if I do. -> END
+
+=== cold
+Raoul: Then I will leave you to it. | But I will be near.
+-> END

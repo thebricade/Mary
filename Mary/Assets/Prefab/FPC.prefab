@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 5071613939425186048}
   - component: {fileID: 1313617938538734906}
   - component: {fileID: 7815652356843411831}
+  - component: {fileID: 7000000000000000001}
   m_Layer: 0
   m_Name: FPC
   m_TagString: Player
@@ -202,3 +203,16 @@ MonoBehaviour:
   cameraHolder: {fileID: 2192090804861644642}
   lookSensitivity: 0.1
   maxPitch: 85
+--- !u!114 &7000000000000000001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3506165911986345119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43459597b4414bfa90af7d1371f640a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerInteractor
+  range: 3.5

@@ -1,0 +1,90 @@
+OUTSPOKEN DIALOGUE FORMAT
+=========================
+
+Each character has one plain text file in this folder (Raoul.txt, Phantom.txt, ...).
+Open it in any text editor, change it, save. The next conversation uses the new text. Assign the file to the
+NPC prefab's "Dialogue" slot. (An NPC with no file just speaks its simple "Lines" list.)
+
+Mistakes (a node that doesn't exist, a bad beat number...) show up as yellow warnings in the Unity Console
+with the line number. Click the warning to select the script.
+
+
+THE PIECES
+----------
+# anything         a comment, ignored
+
+=== name           starts a node: one line spoken by a character, plus what Christine can interject
+Speaker: text      what the character says (one line in the file). The first node, or the one named "start", begins the talk
+|                  inside the text, splits it into BEATS (see below)
+>> beats | text -> node
+                   something Christine can interject, available during those beats
+-> node            where the conversation goes if nobody interjects (-> END finishes it)
+~ 3.5              optional: seconds the character waits after finishing, before moving on (default 3)
+@ 25               optional: speaking speed for this line, in characters per second (default: the NPC's Talk Speed, 42)
+
+
+BEATS: THE WHEN OF INTERRUPTING
+-------------------------------
+Put | in the text to cut it into beats:
+
+    Raoul: Christine! | I have been looking for you | everywhere tonight.
+           beat 1       beat 2                        beat 3
+
+While the line is being spoken, the beat changes as the words appear. Nothing about Christine's options is shown
+while a character talks. When the player presses Space, the ">>" lines that include the beat at that exact moment
+appear. Interrupt early and you get different choices than if you wait.
+
+    >> 1        only during beat 1
+    >> 2-3      during beats 2 and 3
+    >> 2-end    during beat 2 up to and including the pause after the line
+    >> end      only in the pause after the line has finished (the bar is shrinking)
+    >> any      always
+    >> 1, end   several can be combined with commas
+
+Up to 4 choices are offered at once, in the order written. If no ">>" line fits the moment, Space shows
+"(nothing to say)" and the character carries on.
+
+
+WHAT HAPPENS WHEN CHRISTINE CUTS IN
+-----------------------------------
+- The character is cut off where they were, with a dash ("I have been looking for--").
+- The options for that moment appear. Press 1-4, or use Up/Down (or the mouse wheel) and Space or Enter.
+  The conversation waits while the player decides.
+- Christine says her chosen line, and the character's cut-off line is shown dimmed above it.
+- The conversation continues at the node after "->" on that >> line. If there is no "->", it uses the node's own "->".
+- If nobody interjects, the character finishes, pauses, and goes to the node's "->".
+
+
+EXAMPLE
+-------
+=== start
+Raoul: Christine! | I have been looking for you | everywhere tonight.
+>> 1   | Raoul? What are you doing here? -> surprised
+>> 2-3 | I have been busy. -> busy
+>> end | I am here now. -> warm
+-> worried
+
+=== surprised
+Raoul: I came to see you, of course.
+-> END
+
+
+SPEED
+-----
+Each NPC has a Talk Speed in the Inspector (characters per second, default 42). Lower is slower:
+    20 = slow and deliberate    42 = normal    70 = fast
+A single line can override it with "@ speed" under its text, e.g. a slow, menacing line:
+
+    === threat
+    Phantom: You should not have come.
+    @ 18
+
+Slower speech also gives more time to interrupt each beat; faster speech makes beats shorter.
+
+
+TIPS
+----
+- Quotes around Christine's text are optional.
+- Node names are not case sensitive. Use short names with underscores.
+- Every node needs a "Speaker: text" line. Christine can also speak in a node (use "Christine: ...").
+- Keep NPC lines to one or two sentences. Long ones are fine, but the interjection window is the interesting part.

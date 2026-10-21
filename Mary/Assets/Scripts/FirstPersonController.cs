@@ -15,6 +15,9 @@ public class FirstPersonController : MonoBehaviour
     [SerializeField] float lookSensitivity = 0.1f;
     [SerializeField] float maxPitch = 85f;
 
+    /// <summary>Set while talking to an NPC (or any menu) to freeze movement and looking.</summary>
+    public bool InputLocked { get; set; }
+
     CharacterController controller;
     InputAction move, look, jump, sprint;
     float pitch;
@@ -67,6 +70,8 @@ public class FirstPersonController : MonoBehaviour
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
         }
+
+        if (InputLocked) return;
 
         Look();
         Move();

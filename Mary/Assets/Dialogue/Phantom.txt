@@ -1,0 +1,36 @@
+# The Phantom. Menacing, patient, quick to take offence.
+# Format guide: _Format.txt
+
+=== start
+Phantom: You came down here alone. | Either you are very brave, | or very curious.
+>> 1   | I came because you called. -> called
+>> 2   | I am not afraid of you. -> defiant
+>> 3   | Curious, mostly. -> curious
+>> end | Why did you send for me? -> called
+~ 4
+-> silence
+
+=== called
+Phantom: Called? | I do not call. | I merely wait, and the willing come.
+>> 1-2 | Do not play games with me. -> defiant
+>> end | Then I am willing. Teach me. -> teach
+
+=== defiant
+Phantom: Brave words, from a girl in the dark. | Be careful. | Courage is only a lack of imagination.
+>> 1-2 | Then show me something worth fearing. -> END
+>> end | I apologise. -> teach
+
+=== curious
+Phantom: Curiosity. | A dangerous talent, | and a useful one.
+>> any | Then use it. Teach me. -> teach
+-> teach
+
+=== teach
+Phantom: Then listen. | A voice is not what you sing with. | It is what you cannot help but sing.
+>> 1   | Show me what you mean. -> END
+>> 2-3 | I think I understand. -> END
+>> end | Teach me, then. -> END
+
+=== silence
+Phantom: Nothing to say? | Good. | Silence is the beginning of listening.
+-> END
